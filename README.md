@@ -17,7 +17,7 @@ Then go on.
 
 ## Instruction, Explanation, and tutorial
 
-I explain all essential part of this app in my blog: 
+I explain all essential part of this app in my blog: http://nextflow.in.th/en/2015/easy-way-to-work-with-sqlite-database-in-ionic-framework/
 
 ## Contact me for training service
 
