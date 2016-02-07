@@ -15,6 +15,10 @@ cordova plugin add https://github.com/brodysoft/Cordova-SQLitePlugin.git
 ```
 Then go on.
 
+## Important Note
+
+ngCordova's SQLite plugin doesn't work on Web browser. You've to run the project in Simulator or real device.
+
 ## Instruction, Explanation, and tutorial
 
 I explain all essential part of this app in my blog: http://nextflow.in.th/en/2015/easy-way-to-work-with-sqlite-database-in-ionic-framework/
