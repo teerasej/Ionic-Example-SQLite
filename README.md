@@ -1,25 +1,29 @@
-Ionic App Base
-=====================
+# Ionic Framework SQLite Example - One Word Save
+An example Ionic framework that use ngCordova's SQLite plugin. 
 
-A starting project for Ionic that optionally supports using custom SCSS.
+According to my training session. I decided to provide a quick, clean example, to show how to save/load data from SQLite database in mobile application which built on Ionic framework technology. 
 
-## Using this project
+> I used Ionic CLI version 1.3.19.
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+## Installation 
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
-```bash
-$ npm install -g ionic
+After fork the project, you need to add your platform and ngCordova's SQLite plugin:
 ```
-
-Then run: 
-
-```bash
-$ ionic start myProject tabs
+ionic platform add android
+ionic platform add ios
+cordova plugin add https://github.com/brodysoft/Cordova-SQLitePlugin.git
 ```
+Then go on.
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+## Important Note
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+ngCordova's SQLite plugin doesn't work on Web browser. You've to run the project in Simulator or real device.
+
+## Instruction, Explanation, and tutorial
+
+I explain all essential part of this app in my blog: http://nextflow.in.th/en/2015/easy-way-to-work-with-sqlite-database-in-ionic-framework/
+
+## Contact me for training service
+
+teerasej@nextflow.in.th
+Tel (+66) 86 661 5058 
