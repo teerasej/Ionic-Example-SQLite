@@ -7,11 +7,12 @@ According to my training session. I decided to provide a quick, clean example, t
 
 ## Installation 
 
-After fork the project, you need to add your platform and ngCordova's SQLite plugin:
+After clone the project, you need to add your platform and ngCordova's SQLite plugin:
 ```
+ionic state restore
+cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
 ionic platform add android
 ionic platform add ios
-cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
 ```
 Then go on.
 
