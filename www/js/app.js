@@ -40,7 +40,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
         // 
         // Instantiate database file/connection after ionic platform is ready.
         // 
-        db = $cordovaSQLite.openDB("nextflow.db");
+        db = $cordovaSQLite.openDB({name:'nextflow.db', location:'default'});
         $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT)');
 
 
