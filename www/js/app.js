@@ -29,6 +29,8 @@ angular.module('starter', ['ionic', 'ngCordova'])
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
+        console.log('ready');
+        
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }
@@ -39,8 +41,13 @@ angular.module('starter', ['ionic', 'ngCordova'])
         // Important!!
         // 
         // Instantiate database file/connection after ionic platform is ready.
-        // 
-        db = $cordovaSQLite.openDB({name:'nextflow.db', location:'default'});
+        //
+        try {
+            db = $cordovaSQLite.openDB({name:"nextflow.db",location:'default'});
+        } catch (error) {
+            alert(error);
+        }
+        
         $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT)');
 
 
