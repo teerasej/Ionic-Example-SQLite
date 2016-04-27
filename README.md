@@ -11,7 +11,7 @@ After fork the project, you need to add your platform and ngCordova's SQLite plu
 ```
 ionic platform add android
 ionic platform add ios
-cordova plugin add https://github.com/brodysoft/Cordova-SQLitePlugin.git
+cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git
 ```
 Then go on.
 
