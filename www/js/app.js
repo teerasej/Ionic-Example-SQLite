@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         console.log('ready');
-        
+
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }
@@ -39,15 +39,15 @@ angular.module('starter', ['ionic', 'ngCordova'])
         }
 
         // Important!!
-        // 
+        //
         // Instantiate database file/connection after ionic platform is ready.
         //
         try {
-            db = $cordovaSQLite.openDB({name:"nextflow.db",location:'default'});
+            db = $cordovaSQLite.openDB({name:"nextflow.db",location:"default"});
         } catch (error) {
             alert(error);
         }
-        
+
         $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT)');
 
 
@@ -77,7 +77,14 @@ angular.module('starter', ['ionic', 'ngCordova'])
 
                     if (res.rows.length > 0) {
 
-                        $scope.newMessage = res.rows.item(0).message;
+                        // $scope.newMessage = res.rows.item(0).message;
+                        var noteItems = [];
+
+                        for (var i = 0; i < res.rows.length; i++) {
+                            noteItems.push(res.rows.item(i));
+                        }
+                        $scope.items = noteItems;
+
                         $scope.statusMessage = "Message loaded successful, cheers!";
                     }
                 },
