@@ -61,6 +61,12 @@ DEALINGS IN THE SOFTWARE.
                 </button>
                 <p>{{ statusMessage }}</p>
             </div>
+            <!-- ion-list -->
+            <ion-list>
+              <ion-item ng-repeat="item in items">
+                    {{ item }}
+              </ion-item>
+            </ion-list>
         </ion-content>
         <ion-footer-bar class="bar-positive">
             <div class="buttons">
